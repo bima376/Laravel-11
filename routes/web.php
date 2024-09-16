@@ -65,3 +65,28 @@ Route::prefix('page')->group(function () {
 #Route::delete(); //menghapus data
 
 
+// Blade Template
+#Cara Kerja If else
+Route::get('/blade-template-ifels', function () {
+    return view('Blade-template.ifels', [
+        'nama' => 'penguin',
+        'jenis' => 'kawasan',
+    ]);
+});
+
+#Cara kerja switch case
+Route::get('/blade-template-switch-case', function () {
+    return view('Blade-template.switch-case', [
+        'nama' => 'penguin',
+        'jenis' => 'burung',
+    ]);
+});
+
+#Cara kerja Loop
+Route::get('/blade-template-loop', function () {
+    return view('Blade-template.loop', [
+        'nama' => 'penguin',
+        'jenis' => 'burung',
+        'makanan' => ['pindang, salmon, teri'],
+    ]);
+}); 
