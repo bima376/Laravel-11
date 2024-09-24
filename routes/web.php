@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 //ROUTE VIEW 
-Route::get('/', function () {
-    return view('welcome');//contoh menggunakan view blade.php routes
-}); 
+// Route::get('/', function () {
+//     return view('welcome');//contoh menggunakan view blade.php routes
+// }); 
 
 Route::get('/basic-routes', function () {
     return 'Basic Routes Laravel'. 10+1;//hanya menampilkan teks "Basik Routes Laravel11" (tanpa menggunakan views blade.php)
@@ -88,5 +88,13 @@ Route::get('/blade-template-loop', function () {
         'nama' => 'penguin',
         'jenis' => 'burung',
         'makanan' => ['pindang, salmon, teri'],
+    ]);
+}); 
+
+
+// BLADE TEMPLATING
+Route::get('/', function () {
+    return view('Blade-template.template', [
+        'judul'=>'Layout Template'
     ]);
 }); 
