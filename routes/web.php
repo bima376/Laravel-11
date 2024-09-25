@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JuniorController;
 use Illuminate\Support\Facades\Route;
 
 //ROUTE VIEW 
@@ -93,8 +94,12 @@ Route::get('/blade-template-loop', function () {
 
 
 // BLADE TEMPLATING
-Route::get('/', function () {
+Route::get('/template', function () {
     return view('Blade-template.template', [
         'judul'=>'Layout Template'
     ]);
 }); 
+
+// PRAKTEK
+Route::get('/', [JuniorController::class, 'index']); 
+Route::get('/junior', [JuniorController::class, 'junior']);
